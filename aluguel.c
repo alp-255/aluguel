@@ -76,4 +76,5 @@ void initializeUsers() {
     strcpy(users[9].username, "user10");
     strcpy(users[9].password, "pass10");
 
-    user_count = 10; 
+    user_count = 10;
+}
