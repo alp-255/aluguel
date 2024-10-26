@@ -87,3 +87,26 @@ int authenticateUser (char *username, char *password) {
     }
     return 0;
 }
+
+void rentCar() {
+    int days, car_index;
+    printf("Escolha um carro (0 a %d): ", car_count - 1);
+    for (int i = 0; i < car_count; i++) {
+        if (cars[i].available) {
+            printf("%d: %s - R$%.2f por dia\n", i, cars[i].model, cars[i].price_per_day);
+        }
+    }
+
+    scanf("%d", &car_index);
+    if (car_index < 0 || car_index >= car_count || !cars[car_index].available) {
+        printf("Carro não disponível.\n");
+        return;
+    }
+
+    printf("Por quantos dias você deseja alugar? ");
+    scanf("%d", &days);
+
+    float total_price = days * cars[car_index].price_per_day;
+    printf("Você alugou o carro %s por %d dias. Total a pagar: R$%.2f\n", cars[car_index].model, days, total_price);
+    cars[car_index].available = 0;
+}
