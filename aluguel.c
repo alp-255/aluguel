@@ -110,3 +110,25 @@ void rentCar() {
     printf("Você alugou o carro %s por %d dias. Total a pagar: R$%.2f\n", cars[car_index].model, days, total_price);
     cars[car_index].available = 0;
 }
+
+int main() {
+    initializeCars();
+    initializeUsers();
+
+    char username[30], password[30];
+
+    printf("Login\n");
+    printf("Usuário: ");
+    scanf("%s", username);
+    printf("Senha: ");
+    scanf("%s", password);
+
+    if (authenticateUser (username, password)) {
+        printf("Login bem-sucedido!\n");
+        rentCar();
+    } else {
+        printf("Falha na autenticação. Tente novamente.\n");
+    }
+
+    return 0;
+}
