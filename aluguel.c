@@ -30,15 +30,15 @@ void initializeCars() {
     cars[1].price_per_day = 100.0;
     cars[1].available = 1;
 
-    strcpy(cars[1].model, "Carro3");
+    strcpy(cars[2].model, "Carro3");
     cars[1].price_per_day = 100.0;
     cars[1].available = 1;
 
-    strcpy(cars[1].model, "Carro4");
+    strcpy(cars[3].model, "Carro4");
     cars[1].price_per_day = 100.0;
     cars[1].available = 1;
 
-    strcpy(cars[1].model, "Carro5");
+    strcpy(cars[4].model, "Carro5");
     cars[1].price_per_day = 100.0;
     cars[1].available = 1;
 
