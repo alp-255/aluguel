@@ -78,3 +78,12 @@ void initializeUsers() {
 
     user_count = 10;
 }
+
+int authenticateUser (char *username, char *password) {
+    for (int i = 0; i < user_count; i++) {
+        if (strcmp(users[i].username, username) == 0 && strcmp(users[i].password, password) == 0) {
+            return 1;
+        }
+    }
+    return 0;
+}
